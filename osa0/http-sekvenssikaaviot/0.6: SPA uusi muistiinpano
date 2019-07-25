@@ -1,0 +1,15 @@
+note over selain:
+Save -nappulaa painettaessa spa.js:n tapahtumakäsittelijä 
+lukee muistiinpanokentän sisällön, tallentaa sen muuttujaan,
+tyhjentää muistiinpanokentän tekstidatan, piirtää sivun 
+uudestaan lisätyn muistiinpanon ja tyhjennetyn muistiinpanokentän 
+kanssa, sekä lähettää muistiinpanon palvelimelle
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over palvelin
+Palvelin lähettää kuittausviestin POST-pyynnön onnistumisesta
+end note
+
+palvelin-->selain: Kuittausviesti JSON-muodossa {"message":"note created"}
